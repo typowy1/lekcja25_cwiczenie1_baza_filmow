@@ -1,0 +1,24 @@
+Baza filmów
+Treść zadania
+
+Stwórz aplikację opartą o Spring MVC która pozwala za pomocą formularza dodawać filmy do bazy danych. Każdy film powinien mieć:
+
+    Id
+    Tytuł
+    Datę premiery
+    Opis
+    Kategorię - zapisaną jako Enum
+
+Zadania:
+
+    Filmy powinny być wyświetlane w formie listy zawierającej tytuły i kategorie
+    Naciśnięcie elementu listy powinno wyświetlać stronę zawierającą jego tytuł, datę premiery oraz opis
+    Dodaj możliwość filtrowania listy filmów po kategorii
+    Dodaj możliwość edycji danych o filmie
+
+Wskazówka
+
+Przy deklaracji daty premiery użyj typu LocalDate. Dodatkowo "naucz" Springa poprawnie interpretować format daty dodając do pola adnotację @DateTimeFormat z odpowiednim patternem.
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate premiereDate;

@@ -16,7 +16,8 @@
     <span th:text="${movie.premiereDate}"></span><br/>
 
     <b>Opis:</b><br/>
-    <span th:text="${movie.description}"></span>
+    <span th:text="${movie.description}"></span><br/>
+    <a th:href="|/film/${movie.id}/edit|">Edytuj</a>
 </div>
 
 </body>

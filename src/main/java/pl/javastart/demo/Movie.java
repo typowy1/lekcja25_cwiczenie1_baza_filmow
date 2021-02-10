@@ -1,5 +1,7 @@
 package pl.javastart.demo;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,8 @@ public class Movie {
     private Long id;
 
     private String title;
+
+    @DateTimeFormat(pattern = "yyyy-MMM-dd") //formatowanie daty
     private String premiereDate;
     private String description;
 

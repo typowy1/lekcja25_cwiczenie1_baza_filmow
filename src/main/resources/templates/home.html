@@ -13,17 +13,17 @@
 
     <a href="/">Wszystkie</a>
     <span> </span>
-    <a href="/?category=COMEDY">Comedy</a>
-    <span> </span>
-    <a href="/?category=SCIFI">Sci-Fi</a>
-    <span> </span>
-    <a href="/?category=DRAMA">Drama</a>
+<!--wybór po kategoriach, enumach-->
+    <div style="display: inline-block" th:each="category : ${T(pl.javastart.demo.Category).values()}">
+        <a th:href="|/?category=${category.name()}|" th:text="${category.displayName}">Sci-Fi</a>
+        <span> </span>
+    </div>
 
 <ul class="list-group">
     <li class="list-group-item" th:each="movie: ${movieList}">
 <!--        Naciśnięcie elementu listy powinno wyświetlać stronę zawierającą jego tytuł, datę premiery oraz opis-->
 <!--        <a th:href="|/film/${movie.id}|" th:text="|${movie.title} ${movie.category}|"></a>-->
-        <a th:href="|/film/${movie.id}|" th:text="|${movie.title} ${movie.category}|"></a>
+        <a th:href="|/film/${movie.id}|" th:text="|${movie.title} ${movie.category.displayName}|"></a>
     </li>
 
 </ul>
